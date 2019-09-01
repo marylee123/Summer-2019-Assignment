@@ -17,8 +17,8 @@
 }
 .info{
   color: black;
-  font-size: 70px;
-  padding-left: 10px;
+  font-size: 55px;
+  padding-top: 50px;
 }
 #input{
   padding-top: 20px;
@@ -27,6 +27,12 @@
   padding-top: 150px;
   text-align: center;
 }
-p{
-  font-size: 70px;
+h3{
+  font-size: 60px;
+}
+#timer {
+  float:right;
+  color: black;
+  padding-right: 20px;
+  font-size: 20px
 }

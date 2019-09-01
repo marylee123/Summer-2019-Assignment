@@ -1,7 +1,3 @@
-
-
-//////////
-
 const stringArray = ["hello world", "we will meet again", "a big elephant"];
 
 let choose = parseInt(Math.random() * 3);

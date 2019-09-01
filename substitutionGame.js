@@ -47,7 +47,7 @@ const runScript = (e) => {
   let script = $("input").val();
   if(e.keyCode == 13){
     if(script == text){
-      $(".bottom").html("<p>Great Job!</p>");
+      $(".bottom").html("<h3>Great Job!</h3>");
     }
   }
 }
