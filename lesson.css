@@ -17,16 +17,10 @@
 }
 .info{
   color: black;
-  font-size: 70px;
+  font-size: 20px;
+  padding-top: 100px;
   padding-left: 10px;
 }
-#input{
-  padding-top: 20px;
-}
-.bottom{
-  padding-top: 150px;
-  text-align: center;
-}
-p{
-  font-size: 70px;
+li{
+  font-size: 25px;
 }

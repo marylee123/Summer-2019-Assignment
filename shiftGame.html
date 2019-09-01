@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="cryptology.css"></link>
+    <link rel="stylesheet" type="text/css" href="game.css"></link>
   </head>
   <body>
     <div class="header">
@@ -17,5 +17,13 @@
         <a href="lesson.html"><button type="button" class="btn btn-success" id="lessons">Lessons</button></a>
       </div>
     </div>
+    <div class="bottom">
+      <div id="timer">
+      </div>
+      <div class="info">
+      </div>
+      <input id="input" type="text" onkeypress="runScript(event)">
+    </div>
+    <script src="shiftGame.js"></script>
   </body>
 </html>
