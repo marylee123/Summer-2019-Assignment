@@ -4,7 +4,7 @@ let choose = parseInt(Math.random() * 3);
 
 let text = stringArray[choose];
 let plaintext = stringArray[choose].split("");
-console.log(plaintext);
+console.log(text);
 
 let compare = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -48,6 +48,8 @@ const runScript = (e) => {
   if(e.keyCode == 13){
     if(script == text){
       $(".bottom").html("<h3>Great Job!</h3>");
+      $("#tryAgain").append("<a href='shift.html'><button type='button' class='btn btn-Default' id='back'>Back</button></a>");
+      $("#tryAgain").append("<a href='substitutionGame.html'><button type='button' class='btn btn-success'>Try Again</button></a>");
     }
   }
 }
