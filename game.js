@@ -1,48 +1,36 @@
 $("#btn").click((e) => {
+  const string = "hello world";
+  let plaintext = string.split("");
 
-});
-
-let plaintext = ["h", "e", "l", "l", "o"];
-/*let removeDuplicateUsingSet = (arr) => {
-    let unique = Array.from(new Set(arr));
-    return unique
-}
-const base = removeDuplicateUsingSet(plaintext);
-let simple = removeDuplicateUsingSet(plaintext);
-console.log(simple);
-let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-let n = 26;
-for(let num = 0; num < simple.length; num++){
+  let compare = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  let randomized = [];
   let i = 0;
-  while(i < 1){
-    let x = parseInt(Math.random() * n);
-    if(alphabet[x] !== simple[num]){
-      simple[num] = alphabet[x];
+  let y = 0;
+  while(i < 26){
+    let x = parseInt(Math.random() * 26);
+    if(alphabet[x] !== alphabet[y] && alphabet[x] !== undefined){
+      randomized.push(alphabet[x]);
       delete alphabet[x];
-      n = n - 1;
       i++
+      y++
     }
   }
-}
-console.log(simple);
+  console.log(randomized);
+  console.log(compare);
 
-for(let x = 0; x < plaintext.length; x++){
-  for(let y = 0; y < base.length; y++){
-    if(base[x] == plaintext[y]){
-      simple.splice(y, 0, simple[x]);
+  let m = 0;
+  while(m<plaintext.length){
+    for(let n = 0; n < compare.length; n++){
+      if(plaintext[m] == compare[n]){
+        plaintext[m] = randomized[n];
+        m++
+      }
+      else if(plaintext[m] == " "){
+        plaintext[m] = " ";
+        m++
+      }
     }
   }
-}
-console.log(simple);
-simple.splice(3, 0, plaintext[3]);
-console.log(simple);*/
-let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-shuffle(alphabet);
-console.log(alphabet);
-let shuffle = () => {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
+  console.log(plaintext);
+});

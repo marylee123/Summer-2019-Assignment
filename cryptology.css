@@ -1,18 +1,17 @@
 .header{
-  background-color: aqua;
+  background-color: #3CB542;
   position: fixed;
   margin: auto;
   width: 100%;
 }
 .content{
   position: relative;
-  border-bottom: solid 5px aqua;
-  border-left: solid 5px aqua;
-}
-#home{
-  background-color: aqua;
+  border-bottom: solid 5px #3CB542;
+  border-left: solid 5px #3CB542;
 }
 #heading{
   font-family: 'Audiowide', cursive;
   font-size: 50px;
+  color: white;
+  padding-left: 10px;
 }
