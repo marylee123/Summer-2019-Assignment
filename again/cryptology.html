@@ -5,26 +5,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="game.css"></link>
+    <link rel="stylesheet" type="text/css" href="cryptology.css"></link>
   </head>
   <body>
     <div class="header">
       <div class="content">
         <h1 id="heading">Cryptology</h1>
         <a href="lesson.html"><button type="button" class="btn btn-success" id="lessons">Lessons</button></a>
+        <a href="testingFirebase.html"><button id="btnLogout" class="btn btn-success">Log Out</button></a>
       </div>
     </div>
-    <div class="bottom">
-      <div id="timer">15:00</div>
-      <script src="timer.js"></script>
-
-      <div class="info"></div>
-      <input id="input" type="text" onkeypress="runScript(event)">
-    </div>
-    <div id="tryAgain"></div>
-    <script src="shiftGame.js"></script>
+    <script src="testingFirebase.js"></script>
   </body>
 </html>

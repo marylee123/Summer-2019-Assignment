@@ -1,18 +1,44 @@
-/*(function() {
-  const config = {
-    apiKey: "AIzaSyBSyFt6gS_xe_qszfTbYsbOljIUVSv7N0",
-    authDomain: "web-quickstart-5505a.firebaseapp.com",
-    databaseURL: "https://web-quickstart-5505a.firebaseio.com",
-    storageBucket: "web-quickstart-5505a.appspot.com",
+(function() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyBsQkjgWqZzIwB5pNnjh9SI5Rb2bqohjHA",
+    authDomain: "test-94645.firebaseapp.com",
+    databaseURL: "https://test-94645.firebaseio.com",
+    projectId: "test-94645",
+    storageBucket: "",
+    messagingSenderId: "1087752185737",
+    appId: "1:1087752185737:web:f56c44b5fa5ed2b0"
   };
-  firebase.initializeApp(config);
-}());*/
-const firebaseConfig = {
-  apiKey: "AIzaSyDvRSHGXF3S-S1O1N8SfPB7dpYev6xYXeM",
-  authDomain: "testing-a5693.firebaseapp.com",
-  databaseURL: "https://testing-a5693.firebaseio.com",
-  projectId: "testing-a5693",
-  storageBucket: "",
-  messagingSenderId: "684379660632",
-  appId: "1:684379660632:web:a1838d2685aecbf3"
-};
+  firebase.initializeApp(firebaseConfig);
+
+  const txtEmail = document.getElementById("txtEmail");
+  const txtPassword = document.getElementById("txtPassword");
+  const btnLogin = document.getElementById("btnLogin");
+  const btnSignUp = document.getElementById("btnSignUp");
+
+  btnLogin.addEventListener("click", e => {
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+  btnSignUp.addEventListener("click", e => {
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+
+    const promise = auth.createUserWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser) {
+      console.log(firebaseUser);
+    } else {
+      console.log("not logged in");
+    }
+  });
+}());

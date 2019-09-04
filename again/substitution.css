@@ -18,9 +18,7 @@
 .info{
   color: black;
   font-size: 20px;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-left: 10px;
-}
-li{
-  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
 }
