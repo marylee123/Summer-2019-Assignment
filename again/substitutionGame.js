@@ -74,7 +74,6 @@ const runScript = (e) => {
   }
 }
 
-
 var time = 900;
 const timeDown = setInterval(function() {
   time--;
